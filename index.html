@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="http://at.alicdn.com/t/font_1970148_9ky800314ls.css">
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+<div id="app">
+  <div class="box">
+    <div class="header">
+      <h3>网易云音乐</h3>
+      <div class="right">
+        <i class="iconfont icon-search"></i>
+        <input type="text" placeholder="搜索歌手/歌曲" v-model="song" @keyup.enter="searchSong">
+      </div>
+    </div>
+    <div class="content">
+      <div class="song">
+        <ul v-cloak>
+          <li v-for="item in musicList" :key="item.id">
+            <p>
+            <img src="https://images.genius.com/27b630e743b1792609793ffc71699877.600x600x1.jpg" @click="playMusic(item.id)"></img>
+            <span @click="playMusic(item.id)">{{item.name}}</span>
+              <span class="span2">
+                <i class="iconfont icon-yinle"  @click="playMusic(item.id)"></i>
+                <i v-if="item.mvid!=0" class="iconfont icon-MV" @click="playMv(item.mvid)"></i>
+              </span>
+          </p></li>
+        </ul>
+      </div>
+      <div class="song-1">
+        <img class="bar" src="img/img2.png">
+        <img class="die" src="img/img1.png" alt="">
+        <img class="song-img" :src="musicCover" alt="">
+      </div>
+      <div class="commit">
+        <h3>热门留言</h3>
+        <div class="comment_list" v-cloak>
+          <dl v-for="item in hotComments" :key="item.id">
+            <dt>
+              <img :src="item.user.avatarUrl" alt="">
+            </dt>
+            <dd class="name">{{item.user.nickname}}</dd>
+            <dd class="detail">
+              {{item.content}}
+            </dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="audio_icon">
+      <audio :src="musicUrl" controls autoplay loop></audio>
+    </div>
+    <div class="video_icon">
+      <video controls :src="mvUrl"></video>
+      <div class="mask" @click="hide"></div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

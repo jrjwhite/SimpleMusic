@@ -1,0 +1,201 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  height: 100vh;
+  background: url("../img/bg.jpg") no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.box{
+  width: 950px;
+  margin: 80px auto;
+  border-radius: 20px;
+  box-shadow: 0px 1px 8px -2px #808080;
+  background-color: rgba(243,245,248,0.6);
+  position: relative;
+  overflow: hidden;
+}
+.box > .header{
+  height: 50px;
+  background-color: #C20C0C;
+  border-radius: 20px 20px 0px 0;
+}
+.box > .header > h3{
+  float: left;
+  margin: 15px 0 0 20px;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+.box > .header > .right{
+  float: right;
+  margin: 15px 30px 0 0;
+  background-color: #cccccc ;
+  border-radius: 10px;
+}
+.box > .header > .right i{
+  padding-left: 5px;
+}
+.box > .header > .right input{
+  height: 20px;
+  border: 0;
+  background-color: #cccccc ;
+  border-radius: 0 10px 10px 0;
+  outline: none;
+}
+.content{
+  height: 580px;
+}
+.content div{
+  float: left;
+}
+.song{
+  width: 290px;
+  height: 580px;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+.content  .song ul{
+}
+.content > .song ul li{
+  width: 225px;
+  margin: 15px;
+  border: 1px solid #C20C0C;
+  border-radius: 20px;
+}
+.content > .song ul li p{
+  color: #333333;
+}
+.content > .song ul li p img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: 3px;
+  margin-left: 5px;
+}
+.content > .song ul li p span{
+  width: 100px;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.content > .song ul li p .span2{
+  width: 50px;
+
+}
+.content > .song ul li p i{
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.song-1{
+  position: relative;
+  margin-left: 70px;
+}
+.content  .song-1 .bar{
+  position: absolute;
+  top: -10px;
+  left: 120px;
+  transform: rotate(-25deg);
+  transform-origin: 12px 12px;
+  transition: 1s;
+}
+.content > .song-1  .die{
+  margin-top: 60px;
+}
+.content > .song-1 .song-img{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  left: 50px;
+  top: 110px;
+  border-radius: 50%;
+}
+.content > .commit{
+  margin-left: 100px;
+  position: absolute;
+  left: 60%;
+}
+.commit h3{
+  margin-bottom: 10px;
+}
+.comment_list{
+  overflow: auto;
+  height: 535px;
+
+}
+.commit > .comment_list img{
+  width: 40px;
+  height: 40px;
+  float: left;
+  border-radius: 50%;
+}
+.comment_list dl{
+  margin-bottom: 20px;
+}
+.comment_list dd{
+  display: block;
+  width: 200px;
+}
+
+.comment_list .name{
+  color: #333;
+  text-align: left;
+  font-size: 12px;
+  margin-left: 50px;
+  padding-top: 5px;
+}
+.comment_list .detail{
+  color: #666;
+  line-height: 18px;
+  text-align: left;
+  font-size: 12px;
+  margin-left: 50px;
+  padding-top: 5px;
+}
+.audio_icon audio{
+  width: 950px;
+  border: 0;
+  outline: none;
+}
+.video_icon{
+  display: none;
+}
+.video_icon video{
+  position: fixed;
+  width: 800px;
+  height: 600px;
+  left: 25%;
+  top: 10%;
+  z-index: 99999;
+}
+.video_icon .mask{
+  position: fixed;
+  width: 100%;
+  height: 900px;
+  left: 0;
+  top: -102px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 90;
+  border-radius: 30px;
+  background-color: rgba(0,0,0,.8);
+}
+[v-cloak] {
+  display: none;
+}
